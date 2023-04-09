@@ -17,3 +17,7 @@
 # num = 30
 # num *= "-="
 # print(num)
+
+palavra = 'asd'
+palavra[0]
+print(palavra)
