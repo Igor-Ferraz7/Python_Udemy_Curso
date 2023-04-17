@@ -32,18 +32,19 @@ CPF = CPF.replace('-', '') #formatando a string
 try:
     for num in CPF:
         lista_cpf.append(int(num)) #adicionando cada índice da string transformada em inteiro.
-    if len(lista_cpf) > 11 or len(lista_cpf) < 11:
-        print(int(adqwda))
+
+    if len(lista_cpf) != 11: # tratamento de erros (CPF maior ou menor que 11 numeros)
+        raise NameError('CPF inválido, não exceder (ou inserir menos de) 11 números.')
 
 except ValueError:
     print('CPF inválido, por favor, insira somente números (), pontos e um travessão.')
-except NameError:
-    print('CPF inválido, não exceder (ou inserir menos de) 11 números.')
+except NameError as error:
+    print(error)
 
 else:
     for c in range(10, 1, -1):
-        lista_cpf_mult.append(c * lista_cpf[i])
-        soma_mult += lista_cpf_mult[i]
+        lista_cpf_mult.append(c * lista_cpf[i]) # multiplicando cada numero do cpf
+        soma_mult += lista_cpf_mult[i] # somando cada multiplicação
         i += 1
 
     resultado = (soma_mult * 10) % 11
