@@ -9,7 +9,7 @@ Não permita que o programa quebre com erros de índices inexistentes na lista.
 - quando for inserir algo: limpar o terminal
 - o indice a ser apagado deverá ser solicitado
 
-- vai printar indice e o item juntos e sempre deverão ser atualizados 
+- vai printar indice e o item juntos e sempre deverão ser atualizados.
 """
 import os
 
