@@ -27,11 +27,11 @@ i = soma_mult = resultado = 0
 
 CPF = input("Digite seu CPF: ")
 
-CPF = CPF.replace('.', '') #formatando a string
-CPF = CPF.replace('-', '') #formatando a string
+CPF = CPF.replace('.', '') # formatando a string.
+CPF = CPF.replace('-', '') # formatando a string.
 try:
     for num in CPF:
-        lista_cpf.append(int(num)) #adicionando cada índice da string transformada em inteiro.
+        lista_cpf.append(int(num)) # adicionando cada índice da string transformada em inteiro.
 
     if len(lista_cpf) != 11: # tratamento de erros (CPF maior ou menor que 11 numeros)
         raise NameError('CPF inválido, não exceder (ou inserir menos de) 11 números.')
