@@ -12,7 +12,7 @@ letra digitada está na palavra secreta.
 """
 import os
 
-palavra_secreta = "coisa"
+palavra_secreta = "testes"
 letras_acertadas = ''
 tentativas = 0
 
