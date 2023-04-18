@@ -1,0 +1,2 @@
+palavra = "Ornitorrinco"
+print(palavra[::])
