@@ -1,4 +1,4 @@
-# Cortando strings
+# Cortando strings.
 frase = 'Olha só, que coisa mais interessante!'
 
 lista_palavras = frase.split() # separa (com ' ' por padrão)
