@@ -1,2 +1,0 @@
-palavra = "Ornitorrinco"
-print(palavra[::])
