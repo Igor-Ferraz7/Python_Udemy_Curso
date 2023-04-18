@@ -1,4 +1,4 @@
-#gerador de cpfs
+#gerador de cpfs.
 import random
 
 cpf = ''
