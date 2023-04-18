@@ -1,4 +1,4 @@
-# desempacotamento de listas
+# desempacotamento de listas.
 lista = [1, 2]
 num1, num2 = lista
 print(num1, num2)
