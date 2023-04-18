@@ -1,8 +1,8 @@
 lista_cpf = []
 lista_cpf_mult = []
 i = i2 = soma_mult = soma_mult2 = 0
-CPF = input("Digite seu CPF: ")
 
+CPF = input("Digite seu CPF: ")
 CPF = CPF.replace('.', '') #formatando a string
 CPF = CPF.replace('-', '') #formatando a string
 
