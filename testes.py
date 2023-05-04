@@ -18,6 +18,6 @@
 # num *= "-="
 # print(num)
 
-palavra = 'asd'
-palavra[0]
-print(palavra)
+string = [1, 2, 3, 4, 5]
+qtd = string.count(string)
+print(qtd)
