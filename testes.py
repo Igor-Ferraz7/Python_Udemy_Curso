@@ -18,6 +18,8 @@
 # num *= "-="
 # print(num)
 
-string = [1, 2, 3, 4, 5]
-qtd = string.count(string)
-print(qtd)
+# string = [1, 2, 3, 4, 5]
+# qtd = string.count(string)
+# print(qtd)
+
+print('teste')
