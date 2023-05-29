@@ -1,4 +1,4 @@
-# Associação
+# Associação: USAR outra classe/objeto
 class Writer:
     def __init__(self) -> None:
         self._tool = None
