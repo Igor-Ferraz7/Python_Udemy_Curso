@@ -1,3 +1,4 @@
+# Agregação: POSSUIR/TER um objeto (ou seja, ele o salva)
 class Cart:
     def __init__(self) -> None:
         self.products = []
