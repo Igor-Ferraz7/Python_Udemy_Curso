@@ -1,25 +1,30 @@
 # Agregação: POSSUIR/TER um objeto (ou seja, ele o salva)
 class Cart:
     def __init__(self) -> None:
-        self.products = []
+        self._products = []
 
-    def add_product(self, *product):
-        print(product) # Observando que adicionam objetos numa tupla (tem q desempacotar com for)
-        self.products.append(product)
+    def total(self):
+        return sum([p.price for p in self._products])
     
-    # def show_products(self):
-        # for product in self.products:
-            # print(product.name, product.price)
+
+    def insert_products(self, *products): # Observando que adicionam objetos numa tupla (tem q desempacotar com for)
+        # self._products += products
+        for product in products:
+            self._products.append(product)
+
+
+    def list_products(self):
+        for product in self._products:
+            print(f"Product: {product.name}, Price: {product.price}")
+
 
 class Product:
-    def __init__(self, name, price):
+    def __init__(self, name, price) -> None:
         self.name = name
         self.price = price
 
-cart1 = Cart()
-pen = Product('Pen', 1.5)
-pencil = Product('Pencil', 2.0)
-cart1.add_product(pen, pencil)
-# cart1.show_products()
 
-
+c1 = Cart()
+p1, p2 = Product("Milk", 10.99), Product("Cereal", 13.99)
+c1.insert_products(p1, p2)
+c1.list_products()
