@@ -17,7 +17,7 @@ class Tools:
         self.name = name
 
     def write(self):
-        return f'{self.name} are writing.'
+        return f'{self.name} is writing.'
 
 w1 = Writer()
 t1 = Tools('Pen Bic')
