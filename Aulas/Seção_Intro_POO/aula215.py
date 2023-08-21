@@ -1,7 +1,8 @@
 # Associação: USAR outra classe/objeto
+# Nele, um atributo da classe se comunica/relaciona com outra classe.
 class Writer:
     def __init__(self) -> None:
-        self._tool = None
+        self._tool = None # Atributo que se relaciona com a classe "Tools"
     
     @property
     def tool(self):
@@ -9,7 +10,7 @@ class Writer:
     
     @tool.setter
     def tool(self, tool):
-        self._tool = tool
+        self._tool = tool # Atributo recebendo o objeto instanciado da classe "Tools"
 
 class Tools:
     def __init__(self, name) -> None:
