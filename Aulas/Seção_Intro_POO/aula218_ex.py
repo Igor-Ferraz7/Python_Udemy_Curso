@@ -9,46 +9,51 @@
 # Exiba o nome do carro, motor e fabricante na tela
 
 class Car:
-    def __init__(self, name):
+    def __init__(self, name) -> None:
         self.name = name
-        self.manufacturer = None
-        self.motor = None
-    
-    @property
-    def set_manufacturer(self):
-        return self.manufacturer
-    
-    @set_manufacturer.setter
-    def set_manufacturer(self, manufacturer):
-        self.manufacturer = manufacturer
-    
-    @property
-    def set_motor(self):
-        return self.motor
-    
-    @set_motor.setter
-    def set_motor(self, motor):
-        self.motor = motor
+        self._motor = None
+        self._manufacturer = None
 
-class Manufacturer:
-    def __init__(self, name):
-        self.name = name
+    @property
+    def motor(self):
+        return self._motor
+
+    @motor.setter
+    def motor(self, motor):
+        self._motor = motor
+
+    @property
+    def manufacturer(self):
+        return self._manufacturer
+
+    @manufacturer.setter
+    def manufacturer(self, manufacturer):
+        self._manufacturer = manufacturer
+
 
 class Motor:
-    def __init__(self, name):
+    def __init__(self, name) -> None:
+        self.name = name
+        
+
+class Manufacturer:
+    def __init__(self, name) -> None:
         self.name = name
 
-volkswagen = Manufacturer('Volkswagen')
-fiat = Manufacturer('Fiat')
-ford = Manufacturer('Ford')
 
-motor_10 = Motor(1.0)
+volkswagem = Manufacturer("Volkswagem")
+fiat = Manufacturer("Fiat")
 
-fusca = Car('Fusca')
-fusca.set_manufacturer = volkswagen.name
-fusca.set_motor = motor_10.name
+motor2_0 = Motor("Motor 2.0")
+motor3_0 = Motor("Motor 3.0")
 
-uno = Car('Uno')
+fusca = Car("Fusca")
+fusca.motor = motor2_0
+fusca.manufacturer = volkswagem
 
+uno = Car("Uno")
+uno.motor = motor3_0
+uno.manufacturer = fiat
 
-print(fusca.name, fusca.manufacturer, fusca.motor)
+for car in [fusca, uno]:
+    print(car.name, car.motor.name, car.manufacturer.name)
